@@ -1,0 +1,24 @@
+v: 0
+micros:
+  - name: auth-api
+    src: .
+    engine: nodejs16
+    primary: true
+    public_routes:
+      - "/api/auth/*"
+    presets:
+      env:
+        - name: MONGO_URI
+          description: MongoDB connection string
+        - name: JWT_SECRET
+          description: Secret key for JWT tokens
+        - name: EMAIL_SERVICE
+          description: Email service for sending mails
+        - name: EMAIL_USERNAME
+          description: Email username
+        - name: EMAIL_PASSWORD
+          description: Email password
+        - name: EMAIL_FROM
+          description: Sender email address
+        - name: EMAIL_FROM_NAME
+          description: Sender name 
